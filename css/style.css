@@ -8,11 +8,11 @@ body {
 }
 p {
     background: #00bcd4;
-    color: pink;
+    color: red;
     border: none;
     padding: 5px 10px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
     transition: 0.3s;
 }
