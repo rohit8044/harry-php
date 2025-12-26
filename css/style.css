@@ -6,6 +6,16 @@ body {
     padding: 0;
     text-align: center;
 }
+p {
+    background: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 header {
     background: #111;
     padding: 20px;
