@@ -1,0 +1,54 @@
+.hii {
+    height: 100vh;
+    padding: 15px;
+}
+
+.headtext {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: red;
+}
+
+.prent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Small screen par boxes neeche aa jayenge */
+    gap: 20px;
+}
+
+.box {
+    padding: 10px;
+    height: 370px;
+    width: 250px;
+    box-shadow: 3px 3px 3px lightcoral, -3px -3px 3px lightcoral;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+.box img{
+    border-radius: 30px;
+}
+.box .hackname{
+    text-align: center;
+    color:red;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.box .hackbutton{
+    margin-top: 15px;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.box .acha{
+    color: white;
+    text-decoration: none;
+}
+.box .hackbutton:hover{
+    background-color: blueviolet;
+    background-color: red;
+}
