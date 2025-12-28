@@ -1,4 +1,4 @@
-import './css/style.css'
+import './loginpage.css'
 import { useNavigate } from 'react-router-dom'
 export default function Loginpage(){
    const navigate = useNavigate();
@@ -31,3 +31,4 @@ export default function Loginpage(){
     )
 
 }
+
