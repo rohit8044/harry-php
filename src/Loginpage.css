@@ -1,86 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+
+/* Page Background */
 .container{
-  width: 100%;
-  height: 100vh;
-  background: #f5f6fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
 }
+
+/* Login Card */
 .logindiv{
-  width: 90%;
-  max-width: 400px;
-  background: #fff;
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    animation: fadeSlide 1s ease forwards;
 }
-.inputbox label{
-    font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  display: block;
-  color: #333;
+
+/* Card Entrance */
+@keyframes fadeSlide{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+/* Labels */
+label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Input Box */
 .inputbox{
     position: relative;
-    width: 100%;
-     margin-bottom: 18px;
+    margin-bottom: 18px;
 }
-.inputbox .logo{
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  color: #666;
+
+/* Icons */
+.logo{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
 }
+
+/* Inputs */
 .inputbox input{
-  width: 100%;
-  padding: 14px 14px 14px 40px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background: #fafafa;
-  font-size: 14px;
-  outline: none;
-  transition: 0.3s ease;
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255,255,255,0.9);
+    transition: all 0.4s ease;
 }
-.inputbox input:focus {
-  border-color: #4a90e2;
-  background: #fff;
-  box-shadow: 0px 0px 6px rgba(74, 144, 226, 0.3);
+
+/* Focus Animation */
+.inputbox input:focus{
+    border-color: #0066ff;
+    box-shadow: 0 0 12px rgba(0,102,255,0.6);
+    transform: scale(1.02);
 }
-.logindiv .loginbtn{
-  width: 100%;
-  font-size: 20px;
-  padding:10px;
-  border-radius: 6px;
-  border: none;
-  background-color: blue;
-  color: white;
+
+/* Login Button */
+.loginbtn{
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg,#0066ff,#7f00ff);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
 }
-.logindiv .loginbtn:hover{
-  background-color: blueviolet;
+
+/* Button Shine Effect */
+.loginbtn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transition: 0.5s;
 }
-.logindiv .create{
+
+.loginbtn:hover::before{
+    left: 100%;
+}
+
+.loginbtn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Links */
+.create,
+.forget{
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #e0f2ff;
+    transition: 0.3s;
+}
+
+/* Positioning Links */
+.create{
     float: right;
-    font-size: 18px;
-    text-decoration: none;
-    margin-top: 12px;
 }
-.logindiv .forget{
+
+.forget{
     float: left;
-    font-size: 18px;
-    text-decoration: none;
-    margin-top: 12px;
 }
-.logindiv .create:hover{
-  color: #4a90e2;
+
+/* Link Hover */
+.create:hover,
+.forget:hover{
+    color: #fff;
+    text-shadow: 0 0 6px rgba(255,255,255,0.8);
 }
-.logindiv .forget:hover{
-     color: #4a90e2;
+
+/* Clear Float */
+form::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Mobile */
+@media(max-width:420px){
+    .logindiv{
+        margin: 0 15px;
+        padding: 25px;
+    }
 }
